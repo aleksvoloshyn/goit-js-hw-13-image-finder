@@ -20,7 +20,7 @@ refs.loadMoreButton.addEventListener('click', onLoadMore);
 
 function onSearch(e) {
   e.preventDefault();
-
+  clearPicturesContainer();
   imageApiService.query = e.currentTarget.elements.query.value;
   imageApiService.resetPage();
   imageApiService.fetchImages().then(appendPicturesMarkup);
@@ -32,4 +32,8 @@ function onLoadMore() {
 
 function appendPicturesMarkup(hits) {
   refs.gallerySection.insertAdjacentHTML('beforeend', imagesTemplate(hits));
+}
+
+function clearPicturesContainer() {
+  refs.gallerySection.innerHTML = '';
 }
