@@ -1,3 +1,5 @@
+const MY_KEY = '22398165-fb0cc592f6e3d650fc4eef6c6';
+
 export default class ImageApiService {
   constructor() {
     this.searchQuery = '';
@@ -5,12 +7,12 @@ export default class ImageApiService {
   }
 
   fetchImages() {
-    console.log(this);
-    const MY_KEY = '22398165-fb0cc592f6e3d650fc4eef6c6';
+    // console.log(this);
+
     const BASE_URL = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=номер_страницы&page=${this.page}&per_page=12&key=${MY_KEY}`;
 
     return fetch(BASE_URL)
-      .then(res => res.json())
+      .then(response => response.json())
       .then(data => {
         // console.log(data);
         this.incrementPage();
