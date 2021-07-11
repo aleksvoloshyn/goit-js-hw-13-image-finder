@@ -5,3 +5,58 @@
 
 // Стили для файла с примером HTML-фрагмента
 @import './example';
+
+body {
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 300px;
+  margin-right: 20px;
+}
+
+button {
+  width: 160px;
+}
+
+.button-thumb {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: -10px;
+
+  .gallery-item {
+    margin: 10px 10px;
+
+    img {
+      border-radius: 12px;
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+
+  .stats-item {
+    margin: 6px 6px;
+    display: flex;
+  }
+}
+
+.material-icons {
+  margin-right: 6px;
+  color: chocolate;
+}
